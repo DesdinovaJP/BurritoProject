@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="burrito.js"> </script>
+    <title>Juan's Mexican Street Food&trade;</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="JuansBurrito.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <main>
+        <div id="log">
+            <form  name= "userData" action="order.html" onsubmit="return validateUserData(document.userData.userName.value,document.userData.password.value )">
+                <table>
+                    <tr>
+                        <th> Log In to order </th>
+                    </tr>
+                        <tr>
+                            <td><b> Username </b></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="userName" placeholder="Enter your Username" /> </td>
+                        </tr>
+                        <tr>
+                            <td><b> Password </b></td>
+                        </tr>
+                        <tr>
+                            <td><input type="password" id="password" maxlength="11" size="15" placeholder="The length must be 11"/><br/></td>
+                        </tr>
+                </table>
+                <input type="Submit" value="Submit"/>
+            </form>
+        </div>
+        <div id="content">
+            <div id="image">
+                <img src="burrito.jpg" class="banner" alt="Delicious" />
+            </div>
+            <div id="text">
+                <h2>Wondering where the most delicious Burrito 'bean'?</h2>
+                <p class="sub-title">Search no more, Juan's Mexican Street Food&trade; is the place!</p>
+            </div>    
+        </div>
+    </main>
+	
+    <footer>
+		<nav>
+            <ul>
+                <li><a href="http://www.facebook.com" target= "blank" class="fa fa-facebook"></a></li>
+                <li><a href="http://www.twitter.com" target= "blank" class="fa fa-twitter"></a></li>
+                <li><a href="http://www.instagram.com" target= "blank" class="fa fa-instagram"></a></li>
+            </ul>
+		</nav>
+    </footer>
+</body>
+</html>

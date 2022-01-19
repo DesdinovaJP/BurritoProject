@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+}
+/*fonts*/
+h2 {
+    font-size: 35px;
+    margin-top: 0.5em;
+    background-color: #fff;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+   }
+
+.sub-title {
+    background-color: #fff;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+p {
+    margin: 5px 0 5px 0;
+}
+
+html,
+body {
+    height: 90%;
+}
+/*Images*/
+.banner {
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+	border: solid 15px white;
+}
+
+/*Forms and tables*/
+#log {
+	padding: 45px;
+	
+	}
+
+form {
+	padding: 40px;
+	background-color: #1fad45;
+}
+
+#order {
+	background-color: #1fad45;
+	
+}
+
+table {
+	padding-right: 0px;
+}
+
+/*Menu nav bar*/
+nav a:visited,
+nav a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+/*sizing and styling of the elements*/
+main {
+    display: block;
+    background-image: url("backburr.jpg");
+    padding-top: 48px;
+    padding-bottom: 48px;
+    
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: green;
+    padding: 10px;
+}
+
+footer {
+    padding: 15px;
+}
+
+/*Responsive screen*/
+@media only screen and (min-width: 768px) {
+
+    main {
+        display: flex;
+    }
+
+}
+
+
+/*Social media buttons*/
+.fa {
+  position: relative;
+  top: -7px;
+  padding: 7px;
+  font-size: 50px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+ 
+}
+  
+  .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+ .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="burrito.js"> </script>
+    <script>
+        // auto update the total order
+        function updateTotal(value) {
+            document.order.tot_amount.value = value
+        }
+        // apply discount to the total and not allow a new discount
+        function applyDiscount(percentage){
+            // document.form.name.value 
+            document.order.discountPercentage.value = percentage
+        }
+        //Function to simplify the code and leave my JS independent from the HTML
+        function calculateOrder()
+        {
+            calculateTotal(document.order.quantity.value, document.order.burritosize.value, updateTotal, document.order.discountPercentage.value);
+        }
+    </script>
+    <title>Order here!</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="JuansBurrito.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+	<main>
+        <div id="log">
+            <form id="order" name= "order" action="orderConfirmation.html" onsubmit="return validateOrder()" >
+                <table>
+                    <tr>
+                        <th> Order Details </th>
+                    </tr>
+                    <tr>
+                        <td><b> Choose your Burrito </b></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="burritosize" name="burritosize" required onchange="healthAlert(document.order.burritosize.value);calculateOrder()">
+                                <option value="" disabled="" selected="">Choose the size</option>
+                                <option value="Large">Large  € 5</option>
+                                <option value="Extra-Large">Extra-Large  € 7.50</option>
+                                <option value="Supersize">Supersize  € 17</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b> How many ? </b></td>
+                    </tr>
+                    <tr>
+                        <td><input title="Enter Number of Burritos" required id="quantity" name="quantity" type="text" size="2" maxlength="2" onchange="calculateOrder()"/> </td>
+                    </tr>
+                    <tr>
+                        <td><b> Discount Voucher </b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="voucher" id="voucher" placeholder="Fancy a discount?" onchange="applyVoucher(document.order.voucher.value, applyDiscount);calculateOrder()"/> </td>
+                    </tr>
+                    <tr>
+                        <td><b> Total order amount </b></td>
+                    </tr>
+                    <tr>
+                        <td><input name="tot_amount" id="tot_amount" type="text" readonly> </td>
+                    </tr>
+                    <tr>
+                        <td><b> Email </b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" id="email" name="email" required placeholder="Enter your Email" onchange="validateEmail(document.order.email.value)"/> </td>
+                    </tr>
+                </table>
+                <input type="submit" id="submit" value="Submit" >
+                <input type="hidden" name="discountPercentage" value="0" >
+            </form>
+        </div>
+        <div id="content">
+			<div id="image">
+                <img src="Orderimage.jpg" class="banner" alt="Yummy" />
+            </div>
+			<div id="text">
+				<h2>You are one step away from your burrito</h2>
+				<p class="sub-title">Just a few details to place your order</p>
+                <p class="sub-title">Muy Loco: This month we are giving a superdiscount!
+                    Use the code "mextexgood" and check it out!
+                </p>
+			</div>
+        </div>
+    </main>
+	
+    <footer>
+		<nav>
+            <ul>
+                <li><a href="http://www.facebook.com" target= "blank" class="fa fa-facebook"></a></li>
+                <li><a href="http://www.twitter.com" target= "blank" class="fa fa-twitter"></a></li>
+                <li><a href="http://www.instagram.com" target= "blank" class="fa fa-instagram"></a></li>
+            </ul>
+		</nav>
+    </footer>
+</body>
+
+</html>
